@@ -1,0 +1,32 @@
+### Request 1
+GET /api/post/create HTTP/1.1
+Host: localhost
+Content-Type: application/json
+
+{
+    "title": "John Doe",
+    "post": "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum",
+    "user_id": 1
+}
+
+### Request 2
+POST /api/users HTTP/1.1
+Host: localhost:8000
+Content-Type: application/json
+Content-Length: 36
+
+{
+    "name": "John Doe",
+    "email": "johndoe@example.com"
+}
+
+### Request 3
+POST /api/models HTTP/1.1
+Host: localhost
+Content-Type: application/json
+Content-Length: 45
+
+{
+    "name": "Test Model",
+    "description": "This is a test model"
+}
