@@ -4,7 +4,11 @@ from .models import Post, Category
 from .serializers import PostSerializer, CategorySerializer
 
 # Create your views here.
-class PostListCreateView(generics.ListCreateAPIView):
+class PostListView(generics.ListCreateAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+
+class PostCreateView(generics.CreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
@@ -35,3 +39,11 @@ class CategoryUpdateView(generics.UpdateAPIView):
 class CategoryDestroyView(generics.DestroyAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+
+# views.py
+from django.http import JsonResponse
+
+def custom_upload_file(request):
+    # Your file upload logic here
+    return JsonResponse({'message': 'File uploaded successfully'})

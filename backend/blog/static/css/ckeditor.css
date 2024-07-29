@@ -1,0 +1,197 @@
+/* CKEditor Dark Mode */
+body .cke {
+    background-color: #333;
+    color: #fff;
+}
+
+body .cke .cke_top {
+    background-color: #222;
+}
+
+body .cke .cke_toolgroup {
+    border-color: #444;
+}
+
+body .cke .cke_toolgroup .cke_button {
+    color: #fff;
+}
+
+body .cke .cke_toolgroup .cke_button:hover {
+    background-color: #444;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_on {
+    background-color: #666;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled:hover {
+    background-color: transparent;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open.cke_button_icon_opened_disabled_open_hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open.cke_button_icon_opened_disabled_open_hover:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open.cke_button_icon_opened_disabled_open_hover.cke_button_icon_opened_disabled_open_pressed {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open.cke_button_icon_opened_disabled_open_hover.cke_button_icon_opened_disabled_open_pressed:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open.cke_button_icon_opened_disabled_open_hover.cke_button_icon_opened_disabled_open_pressed.cke_button_icon_opened_disabled_opened {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open.cke_button_icon_opened_disabled_open_hover.cke_button_icon_opened_disabled_open_pressed.cke_button_icon_opened_disabled_opened:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open.cke_button_icon_opened_disabled_open_hover.cke_button_icon_opened_disabled_open_pressed.cke_button_icon_opened_disabled_opened.cke_button_icon_opened_disabled_opened_hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open.cke_button_icon_opened_disabled_open_hover.cke_button_icon_opened_disabled_open_pressed.cke_button_icon_opened_disabled_opened.cke_button_icon_opened_disabled_opened_hover.cke_button_icon_opened_disabled_opened_pressed {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open.cke_button_icon_opened_disabled_open_hover.cke_button_icon_opened_disabled_open_pressed.cke_button_icon_opened_disabled_opened.cke_button_icon_opened_disabled_opened_hover.cke_button_icon_opened_disabled_opened_pressed.cke_button_icon_opened_disabled_opened_disabled {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open.cke_button_icon_opened_disabled_open_hover.cke_button_icon_opened_disabled_open_pressed.cke_button_icon_opened_disabled_opened.cke_button_icon_opened_disabled_opened_hover.cke_button_icon_opened_disabled_opened_pressed.cke_button_icon_opened_disabled_opened_disabled:hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open.cke_button_icon_opened_disabled_open_hover.cke_button_icon_opened_disabled_open_pressed.cke_button_icon_opened_disabled_opened.cke_button_icon_opened_disabled_opened_hover.cke_button_icon_opened_disabled_opened_pressed.cke_button_icon_opened_disabled_opened_disabled.cke_button_icon_opened_disabled_opened_disabled_hover {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open.cke_button_icon_opened_disabled_open_hover.cke_button_icon_opened_disabled_open_pressed.cke_button_icon_opened_disabled_opened.cke_button_icon_opened_disabled_opened_hover.cke_button_icon_opened_disabled_opened_pressed.cke_button_icon_opened_disabled_opened_disabled.cke_button_icon_opened_disabled_opened_disabled_hover.cke_button_icon_opened_disabled_opened_disabled_pressed {
+    opacity: 0.5;
+}
+
+body .cke .cke_toolgroup .cke_button.cke_button_disabled .cke_button_icon.cke_button_icon_disabled.cke_button_icon_hover.cke_button_icon_pressed.cke_button_icon_open.cke_button_icon_open_hover.cke_button_icon_open_pressed.cke_button_icon_opened.cke_button_icon_opened_hover.cke_button_icon_opened_pressed.cke_button_icon_opened_disabled.cke_button_icon_opened_disabled_hover.cke_button_icon_opened_disabled_pressed.cke_button_icon_opened_disabled_open.cke_button_icon_opened_disabled_open_hover.cke_button_icon_opened_disabled_open_pressed.cke_button_icon_opened_disabled_opened.cke_button_icon_opened_disabled_opened_hover.cke_button_icon_opened_disabled_opened_pressed.cke_button_icon_opened_disabled_opened_disabled.cke_button_icon_opened_disabled_opened_disabled_hover.cke_button_icon_opened_disabled_opened_disabled_pressed.cke_button_icon_opened_disabled_opened_disabled_open {
+    opacity: 0.5;
+}
