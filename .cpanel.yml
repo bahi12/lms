@@ -1,0 +1,6 @@
+deployment:
+  tasks:
+    - command: echo "Deployment started"
+    - command: pip install -r requirements.txt
+    - command: python manage.py migrate
+    - command: systemctl restart apache 
