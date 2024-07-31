@@ -24,8 +24,6 @@ class PostUpdateView(generics.UpdateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
-    def perform_update(self, serializer):
-        serializer.save(post=self.get_object())
 
 class PostDestroyView(generics.DestroyAPIView):
     permission_classes = [IsAuthenticated]
