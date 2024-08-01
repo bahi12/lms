@@ -1,11 +1,11 @@
-from django.conf import settings
-from backend.core.settings import AUTH_USER_MODEL
+from django.contrib.auth import get_user_model
 from rest_framework import serializers
 from django.contrib.auth import authenticate
-from backend.user.apps import UserConfig
+
+User = get_user_model()
 
 
-User = settings.AUTH_USER_MODEL
+
 
 class UserSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
