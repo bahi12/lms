@@ -9,8 +9,11 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8000/api/auth/login', { username, password });
-      // Handle successful login (e.g., store token, redirect)
+      const response = await axios.post('http://localhost:8000/api/auth/login/', { username, password });
+      // Save the tokens to localStorage
+      localStorage.setItem('accessToken', response.data.access);
+      localStorage.setItem('refreshToken', response.data.refresh);
+      // Handle successful login (e.g., redirect)
       console.log('Login successful:', response.data);
     } catch (err) {
       setError('Login failed. Please check your credentials and try again.');
