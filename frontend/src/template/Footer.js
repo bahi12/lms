@@ -2,10 +2,11 @@ import React from 'react';
 
 function Footer() {
   return (
-    <footer className="py-5 bg-dark">
-      <div className="container px-4 px-lg-5"><p className="m-0 text-center text-white">Copyright &copy; HelB Portal 2023</p></div>
+    <footer className="bg-light text-center text-lg-start">
+        <div className="text-center p-3">
+            &copy; 2023 My Website
+        </div>
     </footer>
-  );
-}
-
+);
+};
 export default Footer;
