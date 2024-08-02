@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 function SideBar() {
     return (
         <div className="sidebar">
-        <Link to="#">Bac 2</Link>
-        <Link to="#">Bac 1</Link>
-        <Link to="#">Common Core</Link>
+            <ul className="list-group">
+                <li className="list-group-item"><Link to="#">Bac 2</Link></li>
+                <li className="list-group-item"><Link to="#">Bac 1</Link></li>
+                <li className="list-group-item"><Link to="#">Common Core</Link></li>
+            </ul>
         </div>
     );
     };
