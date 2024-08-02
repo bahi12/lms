@@ -5,7 +5,7 @@ import Footer from './Footer';
 
 function Layout({ children }) {
     return (
-        <div>
+        <div p-3 mb-2 bg-dark text-dark>
             <header>
                 <NavBar />
             </header>
@@ -14,7 +14,7 @@ function Layout({ children }) {
                     <aside className="col-md-3">
                         <SideBar />
                     </aside>
-                    <main className="col-md-9">
+                    <main style={{ height: "100vh" }} className="col-md-9">
                         {children}
                     </main>
                 </div>
