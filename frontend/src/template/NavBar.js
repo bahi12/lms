@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function NavBar() {
-    const isLoggedIn = false; // Replace with your login logic
+    const accessToken = localStorage.getItem('accessToken');
+    const isLoggedIn = accessToken !== null && accessToken !== undefined;
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
