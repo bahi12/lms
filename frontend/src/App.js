@@ -1,13 +1,15 @@
 import React from 'react';
-import PostList from './components/PostList';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './template/Layout';
+import Home from './components/Home';
 
 function App() {
   return (
-    <div>
-      <header>Blog App</header>
-      <h1>Posts</h1>
-      <PostList />
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Layout>
   );
 }
 
