@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function NavBar() {
-    const accessToken = localStorage.getItem('accessToken');
-    const isLoggedIn = accessToken !== null && accessToken !== undefined;
+    const { isLoggedIn, user } = useSelector((state) => state);
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -21,7 +21,7 @@ function NavBar() {
                     aria-controls="navbarNav"
                     aria-expanded="false"
                     aria-label="Toggle navigation"
-                    >
+                >
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
@@ -42,11 +42,14 @@ function NavBar() {
                             </Link>
                         </li>
                     </ul>
-            {isLoggedIn ? (
-                <Link className="btn btn-primary me-2" to="/logout/">Logout</Link>
-            ) : (
-                <Link className="btn btn-primary me-2" to="/login/">Login</Link>
-            )}
+                    {isLoggedIn ? (
+                        <>
+                            <span className="navbar-text me-2">Hello, {user ? user.username : 'User'}</span>
+                            <Link className="btn btn-primary me-2" to="/logout/">Logout</Link>
+                        </>
+                    ) : (
+                        <Link className="btn btn-primary me-2" to="/login/">Login</Link>
+                    )}
                 </div>
             </div>
         </nav>
