@@ -1,28 +1,28 @@
 import React from 'react';
-import axios from 'axios';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { logoutUser } from '../../redux/actions';
 
 const Logout = () => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const handleLogout = async () => {
         try {
-            // Make a POST request to the logout endpoint
-            await axios.post('/api/logout/');
-
-            // Clear the JWT token from local storage or session storage
-            localStorage.removeItem('access_token');
-            sessionStorage.removeItem('access_token');
-
-            // Redirect the user to the login page or any other desired page
-            window.location.href = '/login';
-        } catch (error) {
-            console.error('Logout failed:', error);
+            await dispatch(logoutUser()); // Call your logout action
+            localStorage.removeItem('accessToken');
+            localStorage.removeItem('refreshToken');
+            navigate('/login');
+        } catch (err) {
+            console.error('Logout failed:', err);
         }
     };
 
-    return (
-        <button onClick={handleLogout}>
-            Logout
-        </button>
-    );
+    React.useEffect(() => {
+        handleLogout();
+    }, []);
+
+    return <div>Logging out...</div>;
 };
 
 export default Logout;
