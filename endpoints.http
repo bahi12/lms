@@ -8,7 +8,7 @@ Content-Type: application/json
     "password": "password1",
 }
 ### Login Request
-POST http://127.0.0.1:8000/api/auth/login/
+POST http://localhost:8000/api/auth/token/login/
 Content-Type: application/json
 
 {
@@ -19,10 +19,10 @@ Content-Type: application/json
 ### request for /api/auth/user/ with access token
 GET /api/auth/user/ HTTP/1.1
 Host: localhost:8000
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyNzAxNTgzLCJpYXQiOjE3MjI3MDEyODMsImp0aSI6Ijk3NzUyZTQ2NjhmMzQ4ZTRhZTBkODVjMzBlYmQ2M2M3IiwidXNlcl9pZCI6MX0.e7ZaiW-sCaDS5KnDkCpws5hUmehk89lDxUGi4a7OeeM
-
-
+Authorization: Token 84fc962144fc36b9448fc8e25537f67dec6db36d
 ### request for /api/auth/logout/ with access token
-POST /api/auth/logout/ HTTP/1.1
+
+
+POST /api/auth/token/logout/ HTTP/1.1
 Host: localhost:8000
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzIyNzE3NDkzLCJpYXQiOjE3MjI3MTcxOTMsImp0aSI6IjYxZDRmZDFjMGI0MTQ4ZjViY2RkNjAxNDA2ZWQ4ZDJiIiwidXNlcl9pZCI6MX0.r7F0Exnx_gYJB-7Jc7si88LDvCZp9LqnRpaOGbGcKu0
+Authorization: Token 84fc962144fc36b9448fc8e25537f67dec6db36d
