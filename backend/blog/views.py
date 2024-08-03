@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from .models import Post, Category
 from .serializers import PostSerializer, CategorySerializer
-from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnly, AllowAny
 
 # Create your views here.
 class PostListView(generics.ListCreateAPIView):
@@ -31,10 +31,12 @@ class PostDestroyView(generics.DestroyAPIView):
     serializer_class = PostSerializer
 
 class CategoryListCreateView(generics.ListCreateAPIView):
+    permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
 class CategoryRetrieveView(generics.RetrieveAPIView):
+    permission_classes = [AllowAny]
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
