@@ -3,6 +3,7 @@ import {
     LOGIN_FAIL,
     USER_LOADED_SUCCESS,
     USER_LOADED_FAIL,
+    LOGOUT
 } from './actions';
 
 const initialState = {
@@ -22,11 +23,13 @@ const authReducer = (state = initialState, action) => {
                 isLoggedIn: true,
             };
         case LOGIN_FAIL:
+        case LOGOUT:
             return {
                 ...state,
                 access: null,
                 refresh: null,
                 isLoggedIn: false,
+                user: null,
             };
         case USER_LOADED_SUCCESS:
             return {
