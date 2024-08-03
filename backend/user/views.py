@@ -3,8 +3,10 @@ from django.contrib.auth import get_user_model
 from rest_framework import generics
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from .serializers import UserSerializer, LoginSerializer
+from rest_framework.views import APIView
+
 
 User = get_user_model()
 
@@ -24,6 +26,19 @@ class Login(generics.GenericAPIView):
 
 class Logout(LogoutView):
     template_name = 'logout.html'
+
+class UserDetail(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    def get(self, request, *args, **kwargs):
+        user = request.user
+        user_data = {
+            'id': user.id,
+            'username': user.username,
+            'email': user.email,
+            # Add more fields if needed
+        }
+        return Response(user_data)
 
 class Register(generics.CreateAPIView):
     queryset = User.objects.all()
