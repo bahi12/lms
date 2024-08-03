@@ -5,8 +5,8 @@ import Footer from './Footer';
 
 function Layout({ children }) {
     return (
-        <div p-3 mb-2 bg-dark text-dark>
-            <header>
+        <div className="p-3 mb-2 bg-secondary text-dark">
+            <header className='p-3 mb-3'>
                 <NavBar />
             </header>
             <div className="container-fluid">
