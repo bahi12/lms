@@ -1,6 +1,5 @@
 import React from 'react';
 import PostList from './PostList';
-import Layout from '../template/Layout';
 
 
 function Home() {
