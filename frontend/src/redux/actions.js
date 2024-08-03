@@ -40,3 +40,15 @@ export const loginUser = (username, password) => async (dispatch) => {
         dispatch(loginFail());
     }
 };
+
+export const logoutUser = () => async (dispatch) => {
+    try {
+        await axios.post('http://localhost:8000/api/auth/logout/', {
+            refresh: localStorage.getItem('refreshToken'),
+        });
+        dispatch({ type: 'LOGOUT_SUCCESS' });
+    } catch (err) {
+        console.error('Logout error:', err);
+        dispatch({ type: 'LOGOUT_FAIL' });
+    }
+};
