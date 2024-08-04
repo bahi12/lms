@@ -30,7 +30,7 @@ const Register = () => {
                 dispatch(loginSuccess(auth_token));
 
                 // Load the user data after login
-                const userResponse = await axios.get('http://localhost:8000/api/auth/users/me', {
+                const userResponse = await axios.get('http://localhost:8000/api/auth/users/me/', {
                     headers: {
                         Authorization: `Token ${auth_token}`
                     }
