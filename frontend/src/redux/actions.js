@@ -6,6 +6,8 @@ export const USER_LOADED_SUCCESS = 'USER_LOADED_SUCCESS';
 export const USER_LOADED_FAIL = 'USER_LOADED_FAIL';
 export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
 export const LOGOUT_FAIL = 'LOGOUT_FAIL';
+export const FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS';
+export const FETCH_USER_FAIL = 'FETCH_USER_FAIL';
 
 export const loginSuccess = (token) => ({
     type: LOGIN_SUCCESS,
@@ -70,5 +72,29 @@ export const logoutUser = () => async (dispatch) => {
     } catch (err) {
         console.error('Logout error:', err);
         dispatch(logoutFail());
+    }
+};
+
+export const fetchUserSuccess = (user) => ({
+    type: FETCH_USER_SUCCESS,
+    payload: user,
+});
+
+export const fetchUserFail = () => ({
+    type: FETCH_USER_FAIL,
+});
+
+export const fetchUser = () => async (dispatch, getState) => {
+    const { token } = getState();
+
+    try {
+        const response = await axios.get('http://localhost:8000/api/users/me/', {
+            headers: {
+                Authorization: `Token ${token}`,
+            },
+        });
+        dispatch(fetchUserSuccess(response.data));
+    } catch (error) {
+        dispatch(fetchUserFail());
     }
 };
