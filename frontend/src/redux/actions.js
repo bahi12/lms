@@ -47,9 +47,9 @@ export const loginUser = (username, password) => async (dispatch) => {
       storeTokenSecurely(auth_token); // Implement your secure storage function
   
       // Fetch user data using the retrieved token
-      const userResponse = await axios.get('http://localhost:8000/api/auth/users/me', {
+      const userResponse = await axios.get('http://localhost:8000/api/auth/users/me/', {
         headers: {
-          Authorization: `Bearer ${auth_token}` // Use 'Bearer' for JWT tokens
+          Authorization: `Token ${auth_token}` 
         }
       });
   
@@ -101,7 +101,7 @@ export const fetchUser = () => async (dispatch, getState) => {
     const { token } = getState();
 
     try {
-        const response = await axios.get('http://localhost:8000/api/users/me/', {
+        const response = await axios.get('http://localhost:8000/api/auth/users/me/', {
             headers: {
                 Authorization: `Token ${token}`,
             },
