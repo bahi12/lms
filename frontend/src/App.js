@@ -3,6 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 import Layout from './template/Layout';
 import Home from './components/Home';
 import Login from './components/auth/Login';
+import Logout from './components/auth/Logout';
+import Register from './components/auth/Register';
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="login/" element={<Login />} />
+        <Route path="/logout" element={<Logout />} />
+        <Route path="/register" element={<Register />} />
         <Route path="*" element={NotFound} />
       </Routes>
     </Layout>
