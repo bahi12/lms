@@ -14,7 +14,7 @@ const PostItem = ({ post, view }) => {
 
   if (view === 'cards') {
     return (
-      <Col md={4} className="mb-5">
+      <Col md={4} className="mb-2">
         <Card className="h-100">
           <Card.Body>
             <Card.Title>{post.title}</Card.Title>
@@ -30,7 +30,7 @@ const PostItem = ({ post, view }) => {
     );
   } else if (view === 'list') {
     return (
-      <ListGroup.Item>
+      <ListGroup.Item className='mt-2'>
         <h5>{post.title}</h5>
         <p dangerouslySetInnerHTML={{ __html: renderPost(post.post) }}></p>
       </ListGroup.Item>
