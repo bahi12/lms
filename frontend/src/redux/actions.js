@@ -37,22 +37,35 @@ export const logoutFail = () => ({
 
 export const loginUser = (username, password) => async (dispatch) => {
     try {
-        const response = await axios.post('http://localhost:8000/api/auth/token/login/', { username, password });
-        const { auth_token } = response.data; // Djoser's token response
-        dispatch(loginSuccess(auth_token));
-        localStorage.setItem('auth_token', auth_token); // Save token in local storage
-
-        // Load the user data after login
-        const userResponse = await axios.get('http://localhost:8000/api/auth/user/', {
-            headers: {
-                Authorization: `Token ${auth_token}`
-            }
-        });
-        dispatch(userLoadedSuccess(userResponse.data));
+      const response = await axios.post('http://localhost:8000/api/auth/token/login/', { username, password });
+      const { auth_token } = response.data; // Djoser's token response
+  
+      // Dispatch login success action with token
+      dispatch(loginSuccess(auth_token));
+  
+      // Store token in a secure storage mechanism (e.g., redux-persist)
+      storeTokenSecurely(auth_token); // Implement your secure storage function
+  
+      // Fetch user data using the retrieved token
+      const userResponse = await axios.get('http://localhost:8000/api/auth/users/me', {
+        headers: {
+          Authorization: `Bearer ${auth_token}` // Use 'Bearer' for JWT tokens
+        }
+      });
+  
+      dispatch(userLoadedSuccess(userResponse.data));
     } catch (error) {
-        dispatch(loginFail());
+      dispatch(loginFail(error)); // Pass the error for better error handling
     }
-};
+  };
+  
+  // Function to store the token securely (replace with your preferred method)
+  const storeTokenSecurely = (token) => {
+    // Implement secure storage using a library like redux-persist
+    // with encryption for stronger security
+    localStorage.setItem('auth_token', token); // Temporary solution for demonstration
+  };
+  
 
 export const logoutUser = () => async (dispatch) => {
     try {

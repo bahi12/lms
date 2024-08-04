@@ -1,19 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
+import selectNavBarData from '../redux/selectors';
 
 function NavBar() {
-    const { isLoggedIn, user } = useSelector((state) => ({
-        isLoggedIn: state.isLoggedIn,
-        user: state.user
-    }));
+    const { isLoggedIn, user } = useSelector(selectNavBarData);
+
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
                 <div className="d-flex ms-auto">
                     <Link className="navbar-brand" to="/">
-                        My Website
+                        HelB 
                     </Link>
                 </div>
                 <button
