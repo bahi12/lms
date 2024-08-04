@@ -14,7 +14,7 @@ const PostItem = ({ post, view }) => {
 
   if (view === 'cards') {
     return (
-      <Col md={4} className="mb-2">
+      <Col md={6} className="mb-2">
         <Card className="h-100">
           <Card.Body>
             <Card.Title>{post.title}</Card.Title>
