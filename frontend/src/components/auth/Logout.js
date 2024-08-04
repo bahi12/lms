@@ -10,9 +10,10 @@ const Logout = () => {
     const handleLogout = async () => {
         try {
             await dispatch(logoutUser()); // Call your logout action
-            localStorage.removeItem('accessToken');
-            localStorage.removeItem('refreshToken');
-            navigate('/login');
+            localStorage.removeItem('auth_token');
+            setTimeout(() => {
+                navigate('/login');
+            }, 1500); // 3 seconds delay
         } catch (err) {
             console.error('Logout failed:', err);
         }
