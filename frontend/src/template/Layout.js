@@ -5,19 +5,17 @@ import Footer from './Footer';
 
 function Layout({ children }) {
     return (
-        <div className="p-3 mb-2 bg-secondary text-dark">
+        <div className="bg-secondary container-fluid">
             <header className='p-3 mb-3'>
                 <NavBar />
             </header>
-            <div className="container-fluid">
-                <div className="row">
-                    <aside className="col-md-3">
-                        <SideBar />
-                    </aside>
-                    <main style={{ height: "100vh" }} className="col-md-9">
-                        {children}
-                    </main>
-                </div>
+            <div className="row">
+                <aside className="col-md-2 bg-info">
+                    <SideBar />
+                </aside>
+                <main className="col-md-10 ">
+                    {children}
+                </main>
             </div>
             <footer>
                 <Footer />
