@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes, Navigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Layout from './template/Layout';
 import Home from './components/Home';
 import Login from './components/auth/Login';
@@ -11,20 +11,17 @@ import { useSelector } from 'react-redux';
 
 
 function App() {
-  const isLoggedIn = useSelector((state) => state.isLoggedIn);
 
   return (
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="login/" element={<Login />} />
-        <Route 
-                    path="/me" 
-                    element={isLoggedIn ? <Profile /> : <Navigate to="/login" />} 
-        />
+        <Route path="me/" element={<Profile />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<Register />} />
-        <Route path="*" element={NotFound} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
   );
