@@ -21,7 +21,7 @@ const Logout = () => {
 
     React.useEffect(() => {
         handleLogout();
-    }, []);
+    }, [handleLogout]);
 
     return <div>Logging out...</div>;
 };
