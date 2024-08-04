@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { loginSuccess, userLoadedSuccess } from '../../redux/actions';
+import axios from 'axios';
 
 const Register = () => {
     const [username, setUsername] = useState('');
@@ -8,6 +11,7 @@ const Register = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const handleRegister = async () => {
         try {
@@ -21,9 +25,18 @@ const Register = () => {
 
             if (response.ok) {
                 setMessage('Registration successful');
-                setTimeout(() => {
-                    navigate('/me/');
-                }, 3000); // 3 seconds delay
+                const loginResponse = await axios.post('http://localhost:8000/api/auth/token/login/', { username, password });
+                const { auth_token } = loginResponse.data;
+                dispatch(loginSuccess(auth_token));
+
+                // Load the user data after login
+                const userResponse = await axios.get('http://localhost:8000/api/auth/user/', {
+                    headers: {
+                        Authorization: `Token ${auth_token}`
+                    }
+                });
+                dispatch(userLoadedSuccess(userResponse.data));
+                navigate('/me/');
             } else {
                 const data = await response.json();
                 setMessage(data[Object.keys(data)[0]][0]); // Show the first error message
