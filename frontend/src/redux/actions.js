@@ -4,10 +4,12 @@ export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
 export const LOGIN_FAIL = 'LOGIN_FAIL';
 export const USER_LOADED_SUCCESS = 'USER_LOADED_SUCCESS';
 export const USER_LOADED_FAIL = 'USER_LOADED_FAIL';
+export const LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+export const LOGOUT_FAIL = 'LOGOUT_FAIL';
 
-export const loginSuccess = (access, refresh) => ({
+export const loginSuccess = (token) => ({
     type: LOGIN_SUCCESS,
-    payload: { access, refresh }
+    payload: { token }
 });
 
 export const loginFail = () => ({
@@ -23,16 +25,25 @@ export const userLoadedFail = () => ({
     type: USER_LOADED_FAIL,
 });
 
+export const logoutSuccess = () => ({
+    type: LOGOUT_SUCCESS
+});
+
+export const logoutFail = () => ({
+    type: LOGOUT_FAIL
+});
+
 export const loginUser = (username, password) => async (dispatch) => {
     try {
-        const response = await axios.post('http://localhost:8000/api/auth/login/', { username, password });
-        const { access, refresh } = response.data;
-        dispatch(loginSuccess(access, refresh));
+        const response = await axios.post('http://localhost:8000/api/auth/token/login/', { username, password });
+        console.log('Login response:', response.data);
+        const { auth_token } = response.data; // Djoser's token response
+        dispatch(loginSuccess(auth_token));
 
         // Load the user data after login
         const userResponse = await axios.get('http://localhost:8000/api/auth/user/', {
             headers: {
-                Authorization: `Bearer ${access}`
+                Authorization: `Token ${auth_token}`
             }
         });
         dispatch(userLoadedSuccess(userResponse.data));
@@ -43,12 +54,10 @@ export const loginUser = (username, password) => async (dispatch) => {
 
 export const logoutUser = () => async (dispatch) => {
     try {
-        await axios.post('http://localhost:8000/api/auth/logout/', {
-            refresh: localStorage.getItem('refreshToken'),
-        });
-        dispatch({ type: 'LOGOUT_SUCCESS' });
+        await axios.post('http://localhost:8000/api/auth/token/logout/');
+        dispatch(logoutSuccess());
     } catch (err) {
         console.error('Logout error:', err);
-        dispatch({ type: 'LOGOUT_FAIL' });
+        dispatch(logoutFail());
     }
 };
