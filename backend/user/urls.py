@@ -24,7 +24,7 @@ urlpatterns = [
     # /jwt/refresh/ (JSON Web Token Authentication)
     # /jwt/verify/ (JSON Web Token Authentication) 
 
-    path('api/auth/', include('djoser.urls')),
-    path('api/auth/', include('djoser.urls.authtoken')),
+    path('', include('djoser.urls')),
+    path('', include('djoser.urls.authtoken')),
 
 ]
