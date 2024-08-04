@@ -3,7 +3,10 @@ import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 function NavBar() {
-    const { isLoggedIn, user } = useSelector((state) => state);
+    const { isLoggedIn, user } = useSelector((state) => ({
+        isLoggedIn: state.isLoggedIn,
+        user: state.user
+    }));
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -43,12 +46,33 @@ function NavBar() {
                         </li>
                     </ul>
                     {isLoggedIn ? (
-                        <>
-                            <span className="navbar-text me-2">Hello, {user ? user.username : 'User'}</span>
-                            <Link className="btn btn-primary me-2" to="/logout/">Logout</Link>
-                        </>
+                        <div className="dropdown">
+                            <button
+                                className="btn btn-primary dropdown-toggle"
+                                type="button"
+                                id="dropdownMenuButton"
+                                data-bs-toggle="dropdown"
+                                aria-expanded="false"
+                            >
+                                {user ? user.username : 'User'}
+                            </button>
+                            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li>
+                                    <Link className="dropdown-item" to="/profile">
+                                        Profile
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link className="dropdown-item" to="/logout">
+                                        Logout
+                                    </Link>
+                                </li>
+                            </ul>
+                        </div>
                     ) : (
-                        <Link className="btn btn-primary me-2" to="/login/">Login</Link>
+                        <Link className="btn btn-primary me-2" to="/login/">
+                            Login
+                        </Link>
                     )}
                 </div>
             </div>
