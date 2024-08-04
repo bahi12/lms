@@ -3,13 +3,14 @@ import {
     LOGIN_FAIL,
     USER_LOADED_SUCCESS,
     USER_LOADED_FAIL,
+    LOGOUT_SUCCESS,
+    LOGOUT_FAIL
 } from './actions';
 
 const initialState = {
     isLoggedIn: false,
     user: null,
-    access: null,
-    refresh: null,
+    token: null,   
 };
 
 const authReducer = (state = initialState, action) => {
@@ -24,8 +25,7 @@ const authReducer = (state = initialState, action) => {
         case LOGIN_FAIL:
             return {
                 ...state,
-                access: null,
-                refresh: null,
+                token: null,
                 isLoggedIn: false,
             };
         case USER_LOADED_SUCCESS:
@@ -37,6 +37,17 @@ const authReducer = (state = initialState, action) => {
             return {
                 ...state,
                 user: null,
+            };
+        case LOGOUT_SUCCESS:
+            return {
+                ...state,
+                token: null,
+                isLoggedIn: false,
+                user: null,
+            };
+        case LOGOUT_FAIL:
+            return {
+                ...state,
             };
         default:
             return state;
