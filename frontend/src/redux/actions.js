@@ -36,9 +36,9 @@ export const logoutFail = () => ({
 export const loginUser = (username, password) => async (dispatch) => {
     try {
         const response = await axios.post('http://localhost:8000/api/auth/token/login/', { username, password });
-        console.log('Login response:', response.data);
         const { auth_token } = response.data; // Djoser's token response
         dispatch(loginSuccess(auth_token));
+        localStorage.setItem('auth_token', auth_token); // Save token in local storage
 
         // Load the user data after login
         const userResponse = await axios.get('http://localhost:8000/api/auth/user/', {
@@ -54,7 +54,18 @@ export const loginUser = (username, password) => async (dispatch) => {
 
 export const logoutUser = () => async (dispatch) => {
     try {
-        await axios.post('http://localhost:8000/api/auth/token/logout/');
+        const authToken = localStorage.getItem('auth_token');
+        if (!authToken) {
+            throw new Error('No auth token available');
+        }
+
+        await axios.post('http://localhost:8000/api/auth/token/logout/', null, {
+            headers: {
+                Authorization: `Token ${authToken}`
+            }
+        });
+
+        localStorage.removeItem('auth_token');
         dispatch(logoutSuccess());
     } catch (err) {
         console.error('Logout error:', err);
