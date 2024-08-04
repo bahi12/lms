@@ -6,7 +6,6 @@ import Login from './components/auth/Login';
 import Logout from './components/auth/Logout';
 import Register from './components/auth/Register';
 import Profile from './components/Profile';
-import { useSelector } from 'react-redux';
 
 
 
