@@ -1,5 +1,5 @@
 ### Request 1
-POST /api/auth/login/ HTTP/1.1
+POST /api/auth/token/login/ HTTP/1.1
 Host: localhost:8000
 Content-Type: application/json
 
@@ -8,12 +8,14 @@ Content-Type: application/json
     "password": "password1",
 }
 ### Login Request
-POST http://localhost:8000/api/auth/token/login/
+POST http://localhost:8000/api/auth/users/
 Content-Type: application/json
 
 {
-    "username": "admin",
-    "password": "1234"
+    "username": "user1",
+    "password": "1234",
+    "re_password": "1234",
+    "email": "user1@g.com"
 }
 
 ### request for /api/auth/user/ with access token
