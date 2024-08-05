@@ -23,7 +23,7 @@ const PostItem = ({ post, view }) => {
             </Card.Text>
           </Card.Body>
           <Card.Footer>
-            <Button variant="primary" size="sm" href="#!">Read More</Button>
+            <Button variant="primary" size="sm" href={`/post/${post.id}`}>Read More</Button>
           </Card.Footer>
         </Card>
       </Col>
