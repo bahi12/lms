@@ -6,6 +6,7 @@ import Login from './components/auth/Login';
 import Logout from './components/auth/Logout';
 import Register from './components/auth/Register';
 import Profile from './components/Profile';
+import PostDetail from './components/PostDetail';
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<Register />} />
+        <Route path="post/:postId" element={<PostDetail />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>
