@@ -16,6 +16,7 @@ class PostCreateView(generics.CreateAPIView):
     serializer_class = PostSerializer
 
 class PostRetrieveView(generics.RetrieveAPIView):
+    permission_classes = [AllowAny]
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
