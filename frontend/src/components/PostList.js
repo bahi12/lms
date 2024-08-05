@@ -44,7 +44,7 @@ function PostList() {
       return (
         <Row>
           {posts.map(post => (
-                <PostItem key={post.id} post={post} view={view} />
+            <PostItem key={post.id} post={post} view={view} />
           ))}
         </Row>
       );
