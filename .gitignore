@@ -25,8 +25,6 @@ yarn-error.log
 *.pid
 *.conf.py
 
-passenger_wsgi.py
-
 # Editor files
 .idea
 .vscode
