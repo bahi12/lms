@@ -8,7 +8,7 @@ Content-Type: application/json
     "password": "password1",
 }
 ### Login Request
-POST http://localhost:8000/api/auth/users/
+POST https://bahi12.com/api/auth/users/
 Content-Type: application/json
 
 {
@@ -28,3 +28,12 @@ Authorization: Token 84fc962144fc36b9448fc8e25537f67dec6db36d
 POST /api/auth/token/logout/ HTTP/1.1
 Host: localhost:8000
 Authorization: Token 84fc962144fc36b9448fc8e25537f67dec6db36d
+
+### get from bahi12.com
+POST https://bahi12.com/api/auth/token/login/
+Content-Type: application/json
+    
+    {
+        "username": "admin",
+        "password": "1234"
+    }
