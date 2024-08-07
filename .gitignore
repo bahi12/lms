@@ -8,6 +8,7 @@ __pycache__/
 venv/
 env/
 migrations/
+static/
 
 # Django
 db.sqlite3
@@ -19,6 +20,12 @@ local_settings.py
 npm-debug.log
 yarn-debug.log
 yarn-error.log
+
+# Gunicorn
+*.pid
+*.conf.py
+
+passenger_wsgi.py
 
 # Editor files
 .idea
