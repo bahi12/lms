@@ -1,6 +1,6 @@
 import sys
 import os
-from django.core.wsgi import get_wsgi_application
+from core.wsgi import get_wsgi_application
 
 # Add the path to your Django project's root directory
 sys.path.append('/home/bahi12/dev/lms/backend')
