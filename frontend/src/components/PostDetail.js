@@ -22,7 +22,7 @@ const PostDetail = () => {
     return (
         <div>
             {post ? (
-                <div>
+                <div className='container-fluid bg-white m-3 p3 w-100'>
                     <h1>{post.title}</h1>
                     <p dangerouslySetInnerHTML={{ __html: post.post }}></p>
                 </div>
