@@ -8,7 +8,7 @@ function NavBar() {
 
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark">
             <div className="container-fluid">
                 <div className="d-flex ms-auto">
                     <Link className="navbar-brand" to="/">
