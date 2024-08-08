@@ -9,6 +9,7 @@ venv/
 env/
 migrations/
 static/
+.env
 
 # Django
 db.sqlite3
